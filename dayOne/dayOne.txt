@@ -203,7 +203,7 @@ fun(str);
 Getting input in C++
 
 cin >> str;
-cin.getline(str, 100);
+cin.get(str, 100);
 
 Problem:
 	Write a structre with id, name and salary.
