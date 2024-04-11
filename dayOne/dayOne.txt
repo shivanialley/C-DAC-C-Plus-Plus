@@ -85,9 +85,9 @@ g++ filename.cpp
 
 Compiler will understand following extensions as cpp programs:
 
-.c
-.cc
-.cpp 
+.c for C Program we can use void main() & int main() both
+.cc for C++ Program we have to use int main() only as main should return something
+.cpp for C++ Program
 
 =======================================================================
 
@@ -96,12 +96,20 @@ what are namespaces in C++?
 A namespace is a declarative region that provides a scope to the identifiers (the names of types, functions, variables, etc) inside it. 
 Namespaces are used to organize code into logical groups and to prevent name collisions that can occur especially when your code base includes multiple libraries. 
 
-In case you dont using "using namespace std;", 
+// Code written in the iostream.h file
+ 
+namespace std {
+ostream cout;
+i0stream cin;
+// and some more code
+}
+
+In case you dont using "using namespace std;", //hello.cc
 thenyou have to use the scope resolution operator.
 along with namespace
-for eg: std::cout << "Hello World!\n";
+for eg: std::cout << "Hello World!\n"; //hellowithoutnamespace.cc
 
-In C++ we try to avoid global space, instead we use namespace.
+In C++ we try to avoid global space, instead we use namespace.//namespacemultiple.cc
 
 ========================================================================
 
