@@ -215,14 +215,6 @@ Problem:
 
 =================================================================================
 
-lvalue and rvalues
-
-lvalues are location values like a variable identifiers
-and 
-rvalues are resources like variables, constants and literals.
-
-===========================================================
-
 pass by value in C++
 
 each function has a different memory location for storing local variables.
