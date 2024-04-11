@@ -1,1 +1,10 @@
 
+
+	Exception Handling
+		What are exceptions?
+			Exceptions are runtime abnormal conditions/behaviour that occurs when you program is executed.
+			Example: wrong input/files opening
+
+	Handling of Exception?
+		Throwing or raising an exception is done using throw keyword
+		Handling of exceptions is done in try{}catch() block
