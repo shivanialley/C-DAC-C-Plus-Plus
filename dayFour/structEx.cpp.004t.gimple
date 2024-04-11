@@ -1,0 +1,185 @@
+int main() ()
+{
+  int D.40187;
+
+  {
+    struct Employee E[5];
+
+    try
+      {
+        {
+          int i;
+
+          i = 0;
+          <D.40183>:
+          if (i > 4) goto <D.36251>; else goto <D.40184>;
+          <D.40184>:
+          _1 = &E[i];
+          Employee::acceptDetails (_1);
+          i = i + 1;
+          goto <D.40183>;
+          <D.36251>:
+        }
+        {
+          int i;
+
+          i = 0;
+          <D.40185>:
+          if (i > 4) goto <D.36253>; else goto <D.40186>;
+          <D.40186>:
+          _2 = &E[i];
+          Employee::printDetails (_2);
+          i = i + 1;
+          goto <D.40185>;
+          <D.36253>:
+        }
+        D.40187 = 0;
+        return D.40187;
+      }
+    finally
+      {
+        E = {CLOBBER};
+      }
+  }
+  D.40187 = 0;
+  return D.40187;
+}
+
+
+void Employee::acceptDetails() (struct Employee * const this)
+{
+  _1 = std::operator<< <std::char_traits<char> > (&cout, "Enter the Employee id");
+  std::basic_ostream<char>::operator<< (_1, endl);
+  _2 = &this->id;
+  std::basic_istream<char>::operator>> (&cin, _2);
+  std::basic_istream<char>::ignore (&cin);
+  _3 = std::operator<< <std::char_traits<char> > (&cout, "Enter the Employee name");
+  std::basic_ostream<char>::operator<< (_3, endl);
+  _4 = &this->name;
+  std::operator>><char, std::char_traits<char> > (&cin, _4);
+  _5 = std::operator<< <std::char_traits<char> > (&cout, "Enter the Employee salary");
+  std::basic_ostream<char>::operator<< (_5, endl);
+  _6 = &this->salary;
+  std::basic_istream<char>::operator>> (&cin, _6);
+}
+
+
+void Employee::printDetails() (struct Employee * const this)
+{
+  _1 = std::operator<< <std::char_traits<char> > (&cout, "Details....");
+  std::basic_ostream<char>::operator<< (_1, endl);
+  _2 = std::operator<< <std::char_traits<char> > (&cout, "ID  ");
+  _3 = this->id;
+  _4 = std::basic_ostream<char>::operator<< (_2, _3);
+  _5 = std::operator<< <std::char_traits<char> > (_4, "\tName  ");
+  _6 = &this->name;
+  _7 = std::operator<< <std::char_traits<char> > (_5, _6);
+  _8 = std::operator<< <std::char_traits<char> > (_7, "\tSalary  ");
+  _9 = std::basic_ostream<char>::operator<< (_8, fixed);
+  _10 = this->salary;
+  _11 = std::basic_ostream<char>::operator<< (_9, _10);
+  std::basic_ostream<char>::operator<< (_11, endl);
+}
+
+
+std::ios_base& std::fixed(std::ios_base&) (struct ios_base & __base)
+{
+  struct ios_base & D.40203;
+
+  std::ios_base::setf (__base, 4, 260);
+  D.40203 = __base;
+  return D.40203;
+}
+
+
+std::ios_base::fmtflags std::ios_base::setf(std::ios_base::fmtflags, std::ios_base::fmtflags) (struct ios_base * const this, fmtflags __fmtfl, fmtflags __mask)
+{
+  fmtflags D.40205;
+  fmtflags __old;
+
+  __old = this->_M_flags;
+  _1 = std::operator~ (__mask);
+  _2 = &this->_M_flags;
+  std::operator&= (_2, _1);
+  _3 = std::operator& (__fmtfl, __mask);
+  _4 = &this->_M_flags;
+  std::operator|= (_4, _3);
+  D.40205 = __old;
+  return D.40205;
+}
+
+
+constexpr std::_Ios_Fmtflags std::operator~(std::_Ios_Fmtflags) (_Ios_Fmtflags __a)
+{
+  _Ios_Fmtflags D.40207;
+
+  D.40207 = ~__a;
+  return D.40207;
+}
+
+
+const std::_Ios_Fmtflags& std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) (_Ios_Fmtflags & __a, _Ios_Fmtflags __b)
+{
+  const _Ios_Fmtflags & D.40209;
+
+  _1 = *__a;
+  _2 = std::operator& (_1, __b);
+  *__a = _2;
+  D.40209 = __a;
+  return D.40209;
+}
+
+
+constexpr std::_Ios_Fmtflags std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags) (_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+{
+  _Ios_Fmtflags D.40211;
+
+  D.40211 = __a & __b;
+  return D.40211;
+}
+
+
+const std::_Ios_Fmtflags& std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) (_Ios_Fmtflags & __a, _Ios_Fmtflags __b)
+{
+  const _Ios_Fmtflags & D.40213;
+
+  _1 = *__a;
+  _2 = std::operator| (_1, __b);
+  *__a = _2;
+  D.40213 = __a;
+  return D.40213;
+}
+
+
+constexpr std::_Ios_Fmtflags std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags) (_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+{
+  _Ios_Fmtflags D.40215;
+
+  D.40215 = __a | __b;
+  return D.40215;
+}
+
+
+void __static_initialization_and_destruction_0(int, int) (int __initialize_p, int __priority)
+{
+  if (__initialize_p == 1) goto <D.40217>; else goto <D.40218>;
+  <D.40217>:
+  if (__priority == 65535) goto <D.40219>; else goto <D.40220>;
+  <D.40219>:
+  std::ios_base::Init::Init (&__ioinit);
+  __cxa_atexit (__comp_dtor , &__ioinit, &__dso_handle);
+  goto <D.40221>;
+  <D.40220>:
+  <D.40221>:
+  goto <D.40222>;
+  <D.40218>:
+  <D.40222>:
+}
+
+
+(static initializers for structEx.cpp) ()
+{
+  __static_initialization_and_destruction_0 (1, 65535);
+}
+
+

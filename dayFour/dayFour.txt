@@ -1,1 +1,36 @@
+//Day Four
 
+	Deep Copy & Shallow Copy
+		Example of deep copy in this deep.cpp
+	
+	Implement...
+		struct Node
+		{
+			int data;
+			Node *next;
+			Node(int x = 0);
+		};
+		class LinkedList
+		{
+			Node *first;
+		public:
+			LinkedList();
+			~LinkedList();
+
+			void addAtBeg();
+			void addAtEnd();
+			void addAtPos(int);
+			void disp();
+		};
+	
+	Next:
+		this pointer
+		friend functions and classes
+		Operator Operators
+		Syntax
+			Unary Operators
+			Binary Operators
+		
+		Try overloading ++ operator...
+			-->For pre-fix notation
+			-->For post-fix notation
